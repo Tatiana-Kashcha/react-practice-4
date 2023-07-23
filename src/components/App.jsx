@@ -1,4 +1,12 @@
+import Form from 'components/Form';
+import { UsersList } from './UsersList';
+
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Form />
+      <UsersList />
+    </>
+  );
 };
 export default App;
