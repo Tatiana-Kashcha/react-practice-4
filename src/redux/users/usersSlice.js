@@ -7,15 +7,16 @@ export const usersSlice = createSlice({
   extraReducers: builder =>
     builder
       .addCase(getUsers.fulfilled, (state, action) => {
-        (state.isLoading = false),
-          (state.users = action.payload),
-          (state.error = null);
+        state.isLoading = false;
+        state.users = action.payload;
+        state.error = null;
       })
       .addCase(getUsers.pending, state => {
         state.isLoading = true;
       })
       .addCase(getUsers.rejected, (state, action) => {
-        (state.isLoading = false), (state.error = action.payload);
+        state.isLoading = false;
+        state.error = action.payload;
       }),
 });
 
