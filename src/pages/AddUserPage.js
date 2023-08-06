@@ -1,16 +1,16 @@
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 export default function AddUserPage() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleSubmit = event => {
     event.preventDefault();
-    const newUser = {
-      name: event.target.elements.name.value,
-      email: event.target.elements.email.value,
-      phone: event.target.elements.phone.value,
-      avatar: event.target.elements.avatar.value,
-    };
+    // const newUser = {
+    //   name: event.target.elements.name.value,
+    //   email: event.target.elements.email.value,
+    //   phone: event.target.elements.phone.value,
+    //   avatar: event.target.elements.avatar.value,
+    // };
 
     // dispatch(addUser(newUser));
 
