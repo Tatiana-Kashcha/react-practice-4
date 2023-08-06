@@ -1,4 +1,4 @@
-import { getUsers, getUserId } from './userOperation';
+import { getUsers, getUserId, deleteUser } from './userOperation';
 import { createSlice } from '@reduxjs/toolkit';
 
 export const usersSlice = createSlice({
@@ -27,6 +27,18 @@ export const usersSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getUserId.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(deleteUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.users = state.users.filter(user => user.id !== action.payload.id);
+        state.error = null;
+      })
+      .addCase(deleteUser.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(deleteUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       }),

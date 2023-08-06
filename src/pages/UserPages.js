@@ -12,12 +12,15 @@ export const UserPage = () => {
   const users = useSelector(state => state.users);
   console.log(users);
   return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>
-          <Link to={user.id}>{user.name}</Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
+            <Link to={user.id}>{user.name}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="add">Add user</Link>
+    </>
   );
 };
