@@ -4,6 +4,7 @@ import { Layout } from './Layout/Layout';
 import { HomePage } from 'pages/HomePage';
 import { UserPage } from 'pages/UserPages';
 import { UserDetailsPage } from 'pages/UserDetailsPage';
+import AddUserPage from 'pages/AddUserPage';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='users' element={<UserPage />} />
           <Route path='users/:id' element={<UserDetailsPage />} /> 
+        <Route path='users/add' element={<AddUserPage />} />
         </Route>
 
      </Routes>
