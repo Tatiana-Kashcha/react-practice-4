@@ -12,7 +12,7 @@ export default function AddUserPage() {
       avatar: event.target.elements.avatar.value,
     };
 
-    dispatch(addUser(newUser));
+    // dispatch(addUser(newUser));
 
     event.target.reset();
   };
